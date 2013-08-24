@@ -35,8 +35,16 @@ links:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
 future:      true
-pygments:    true
 markdown:    kramdown
+
+root: /
+permalink:   /:categories/:title
+source: source
+destination: public
+plugins: plugins
+code_dir: downloads/code
+category_dir: blog/categories
+pygments: false # default python pygments have been replaced by pygments.rb
 
 kramdown:
   auto_ids: true
@@ -52,8 +60,4 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: class
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
